@@ -1,0 +1,42 @@
+{
+  "name": "@ktrentfrow/common",
+  "version": "1.0.0",
+  "description": "common interfaces and types.",
+  "main": "dist/index.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "no-test": "echo \"TODO: add test to repo\"",
+    "test-coverage": "npm run build && ./node_modules/mocha/bin/_mocha --require ts-node/register test/*.test.ts --reporter spec",
+    "test": "nyc npm run test-coverage",
+    "build": "tsc -p tsconfig.json",
+    "lint": "echo \"TODO: add linter to repo\"",
+    "prepublishOnly": "npm run build && npm run git && npm version patch",
+    "postpublish": "git push",
+    "git": "git add . && git diff-index --quiet HEAD || git commit -m \"Publishing\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ktrentfrow/common.git"
+  },
+  "keywords": [
+    "KTRENTFROW"
+  ],
+  "author": "Todd Rentfrow",
+  "license": "SEE LICENSE IN LICENSE",
+  "devDependencies": {
+    "@types/chai": "4.3.3",
+    "@types/fs-extra": "9.0.13",
+    "@types/mocha": "9.1.1",
+    "chai": "4.3.6",
+    "mocha": "10.0.0",
+    "ts-node": "10.9.1",
+    "typescript": "5.3.3"
+  },
+  "dependencies": {
+    "@istanbuljs/nyc-config-typescript": "1.0.2",
+    "fs-extra": "10.1.0",
+    "nyc": "15.1.0"
+  }
+}
