@@ -1,6 +1,6 @@
 {
   "name": "@ktrentfrow/common",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "common interfaces and types.",
   "main": "dist/index.js",
   "files": [
